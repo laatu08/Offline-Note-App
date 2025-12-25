@@ -11,7 +11,13 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
+const allowedOrigin = "https://offline-note-app-sigma.vercel.app/";
+
+app.use(cors({
+  origin: allowedOrigin,
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+}));
 app.use(express.json());
 
 // Routes
