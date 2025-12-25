@@ -16,6 +16,7 @@ const allowedOrigin = "https://offline-note-app-sigma.vercel.app/";
 app.use(cors({
   origin: allowedOrigin,
   credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 }));
 app.use(express.json());
