@@ -11,7 +11,7 @@ const app = express();
 connectDB();
 
 // Middleware
-const allowedOrigin = "https://offline-note-app-sigma.vercel.app/";
+const allowedOrigin = "https://offline-note-app-sigma.vercel.app";
 
 app.use(cors({
   origin: allowedOrigin,
